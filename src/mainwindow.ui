@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1154</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Клиент ГБ</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="tab_panel">
+      <property name="background">
+       <brush brushstyle="NoBrush">
+        <color alpha="255">
+         <red>207</red>
+         <green>240</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="viewMode">
+       <enum>QMdiArea::TabbedView</enum>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="tabsMovable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1154</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>Редактор</string>
+    </property>
+    <addaction name="editor_plan"/>
+    <addaction name="editor_fact"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Анализ</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Планы</string>
+     </property>
+     <addaction name="analitic_plan"/>
+     <addaction name="analitic_plan_month"/>
+     <addaction name="separator"/>
+     <addaction name="plan_doc_month"/>
+    </widget>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>Остатки</string>
+     </property>
+     <addaction name="inc_month"/>
+     <addaction name="inc_period"/>
+    </widget>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>Финансирование</string>
+     </property>
+     <addaction name="fact_month"/>
+     <addaction name="fact_year"/>
+    </widget>
+    <addaction name="menu_5"/>
+    <addaction name="menu_7"/>
+    <addaction name="separator"/>
+    <addaction name="menu_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Сервис</string>
+    </property>
+    <addaction name="settings"/>
+    <addaction name="action"/>
+    <addaction name="about"/>
+   </widget>
+   <widget class="QMenu" name="menu_9">
+    <property name="title">
+     <string>Синхронизация</string>
+    </property>
+    <addaction name="not_local"/>
+    <addaction name="from_file"/>
+    <addaction name="local"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_9"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <action name="editor_plan">
+   <property name="text">
+    <string>Планы</string>
+   </property>
+  </action>
+  <action name="editor_fact">
+   <property name="text">
+    <string>Финансирование</string>
+   </property>
+  </action>
+  <action name="settings">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="analitic_plan">
+   <property name="text">
+    <string>c уточнениями</string>
+   </property>
+  </action>
+  <action name="analitic_plan_month">
+   <property name="text">
+    <string>с уточнениями помесячно</string>
+   </property>
+  </action>
+  <action name="plan_doc_month">
+   <property name="text">
+    <string>Справки помесячно</string>
+   </property>
+  </action>
+  <action name="inc_year">
+   <property name="text">
+    <string>По нарастающим за год</string>
+   </property>
+  </action>
+  <action name="editor_report">
+   <property name="text">
+    <string>Отчетов</string>
+   </property>
+  </action>
+  <action name="inc_month">
+   <property name="text">
+    <string>По нарастающим помесячно</string>
+   </property>
+  </action>
+  <action name="local">
+   <property name="text">
+    <string>Локально</string>
+   </property>
+  </action>
+  <action name="not_local">
+   <property name="text">
+    <string>Удаленно</string>
+   </property>
+  </action>
+  <action name="fact_month">
+   <property name="text">
+    <string>Помесячно</string>
+   </property>
+  </action>
+  <action name="fact_year">
+   <property name="text">
+    <string>За год</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Руководство пользователя</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="check_update">
+   <property name="text">
+    <string>Проверить обновление</string>
+   </property>
+  </action>
+  <action name="inc_period">
+   <property name="text">
+    <string>По нарастающим за период</string>
+   </property>
+  </action>
+  <action name="from_file">
+   <property name="text">
+    <string>Из файла</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

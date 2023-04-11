@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="expenses_fact_document">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="year">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="^[0-9]{4}$"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="kgrbs">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]{3}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="number">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="32"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="date" type="xs:date" />
+				<xs:element name="paymentType">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="FUND"/>
+							<xs:enumeration value="REFUND"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element minOccurs="0" name="creatorUid" type="xs:string" />
+				<xs:element minOccurs="0" name="createdAt" type="xs:dateTime" />
+				<xs:element minOccurs="0" name="foreignUid" type="xs:string" />
+				<xs:element minOccurs="0" name="comment" type="xs:string" />
+				<xs:element name="data">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="item">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="expensesPart">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="CURRENT"/>
+													<xs:enumeration value="CAPITAL"/>
+													<xs:enumeration value="CREDIT_ISSUE"/>
+													<xs:enumeration value="CREDIT_REFUND"/>
+													<xs:enumeration value="RESERVE_FUND"/>
+													<xs:enumeration value="ROAD_FUND"/>
+													<xs:enumeration value="COAL_INDUSTRY_FUND"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="kubp">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{5,6}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="krp">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{4}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="kcs">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{7}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="kvr">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{3}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="kosgu">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{3}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element minOccurs="0" name="notes" type="xs:string" />
+										<xs:element name="amount">
+											<xs:simpleType>
+												<xs:restriction base="xs:decimal">
+													<xs:fractionDigits value="2"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

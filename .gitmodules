@@ -1,0 +1,6 @@
+[submodule "3rdparty/LimeReport"]
+	path = 3rdparty/LimeReport
+	url = http://git.minfinlnr.local/LibMirrors/LimeReport.git
+[submodule "3rdparty/QXlsx"]
+	path = 3rdparty/QXlsx
+	url = http://git.minfinlnr.local/silchev/QXlsx.git

@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>migrations/00001__create_tables.sql</file>
+        <file>migrations/00002__create_views.sql</file>
+        <file>migrations/00003__change_month.sql</file>
+        <file>migrations/00004__drop_year_from_bases.sql</file>
+        <file>migrations/00005__change_plan_to_month.sql</file>
+        <file>migrations/00006__create_bases_scope.sql</file>
+        <file>migrations/00007__distinct_bases.sql</file>
+        <file>migrations/00008__distinct_bases_right.sql</file>
+        <file>migrations/00009__change_remn_inc.sql</file>
+        <file>migrations/00010__add_empty_doc.sql</file>
+        <file>migrations/00011__add_exp_part_in_remn_year.sql</file>
+        <file>migrations/00012__add_in_kosgu_ref_notes_req.sql</file>
+        <file>migrations/00013__change_generate_funded_at.sql</file>
+        <file>migrations/00014__add_fund_date_in_factdoc.sql</file>
+    </qresource>
+</RCC>

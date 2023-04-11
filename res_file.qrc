@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>schemas/plan_doc.xsd</file>
+        <file>schemas/fact_doc.xsd</file>
+        <file>reports/zayavka_on_fact_alter.lrxml</file>
+        <file>reports/zayavka_on_fact.lrxml</file>
+        <file>reports/spravka_on_plan_kcs_kosgu.lrxml</file>
+        <file>reports/spravka_on_plan_kkrb_svod.lrxml</file>
+        <file>images/client-gb-logo.png</file>
+        <file>template/solution_plan.xlsx</file>
+    </qresource>
+</RCC>
